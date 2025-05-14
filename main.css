@@ -1,0 +1,101 @@
+html {
+  font-family: "Overpass", sans-serif;
+  background-color: hsl(275, 100%, 97%);
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+
+.acoordion_item.active {
+  padding-bottom: 10px;
+}
+
+.modal {
+  background-color: white;
+  z-index: 99;
+  width: 26rem;
+  margin-top: 35%;
+  padding: 20px;
+  border-radius: 25px;
+}
+
+.img_banner {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  background-image: url("./assets/images/background-pattern-desktop.svg");
+  width: 100%;
+  height: 300px;
+  top: 0;
+  left: 0;
+}
+
+@media only screen and (max-width: 375px) {
+  .img_banner {
+    background-image: url("./assets/images/background-pattern-mobile.svg");
+  }
+  .modal {
+    margin-top: 50%;
+    width: 18rem;
+  }
+}
+
+.head {
+  display: flex;
+  gap: 20px;
+}
+
+h1 {
+  font-weight: 900;
+  font-size: 3rem;
+  margin: 0px;
+  color: hsl(292, 42%, 14%);
+}
+
+h2 {
+  font-size: 15px;
+  font-weight: 700;
+  color: hsl(292, 42%, 14%);
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  content: icon;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px;
+}
+
+.plus {
+  background-image: url("./assets/images/icon-plus.svg");
+}
+
+.minus {
+  background-image: url("./assets/images/icon-minus.svg");
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background: hsl(275, 100%, 97%);
+}
+
+.acoordion_item {
+  padding: 5px;
+}
+
+.accordion_content {
+  font-size: 14px;
+  color: hsl(292, 16%, 49%);
+  padding: 10px 0px;
+  line-height: 1.5;
+}
+
+.acoordion_item.close .accordion_content {
+  display: none;
+}
